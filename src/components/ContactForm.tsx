@@ -23,7 +23,7 @@ export function ContactForm() {
     const raw = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const parsed = schema.safeParse(raw);
     if (!parsed.success) {
-      setError(parsed.error.issues[0].message);
+      setError(parsed.error.issues[0]?.message ?? "Please check the form");
       return;
     }
     setStatus("sending");
