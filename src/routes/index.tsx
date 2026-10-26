@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import logo from "@/assets/logo-dark.svg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Northpeak Partners — Senior operators for growth" },
+      { title: "Uplyft Business — Senior operators for growth" },
       { name: "description", content: "Four senior operators fixing strategy, revenue, talent and execution as one system." },
-      { property: "og:title", content: "Northpeak Partners — Senior operators for growth" },
+      { property: "og:title", content: "Uplyft Business — Senior operators for growth" },
       { property: "og:description", content: "Four senior operators fixing strategy, revenue, talent and execution as one system." },
     ],
   }),
@@ -37,7 +38,7 @@ const reasons = [
 ];
 
 function Btn({ children }: { children: React.ReactNode }) {
-  return <a href="#contact" className="inline-block rounded-full bg-highlight px-7 py-3 font-semibold text-highlight-foreground transition hover:opacity-90">{children}</a>;
+  return <a href="#contact" className="inline-block rounded-full bg-gradient-to-r from-brand-deep to-highlight px-7 py-3 font-semibold text-highlight-foreground transition hover:opacity-90">{children}</a>;
 }
 
 function Index() {
@@ -45,7 +46,7 @@ function Index() {
     <div className="font-sans">
       <header className="bg-primary text-primary-foreground">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-          <span className="font-display text-2xl font-bold">Northpeak</span>
+          <img src={logo.url} alt="Uplyft Business" className="h-12 w-auto" />
           <Btn>Book a session</Btn>
         </nav>
         <section className="mx-auto max-w-6xl px-6 pb-28 pt-16">
@@ -142,7 +143,7 @@ function Index() {
           <div className="mt-8"><Btn>Book the Council</Btn></div>
         </div>
       </section>
-      <footer className="py-8 text-center text-sm text-muted-foreground">© 2026 Northpeak Partners</footer>
+      <footer className="py-8 text-center text-sm text-muted-foreground">© 2026 Uplyft Business</footer>
     </div>
   );
 }
