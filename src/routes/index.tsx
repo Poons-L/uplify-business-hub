@@ -38,30 +38,30 @@ const reasons = [
 ];
 
 function Btn({ children }: { children: React.ReactNode }) {
-  return <a href="#contact" className="inline-block rounded-full bg-gradient-to-r from-brand-deep to-highlight px-7 py-3 font-semibold text-highlight-foreground transition hover:opacity-90">{children}</a>;
+  return <a href="#contact" className="inline-block rounded-full bg-gradient-to-r from-brand-deep to-highlight px-5 py-2.5 text-sm sm:px-7 sm:py-3 sm:text-base font-semibold text-highlight-foreground transition hover:opacity-90">{children}</a>;
 }
 
 function Index() {
   return (
     <div className="font-sans">
       <header className="bg-primary text-primary-foreground">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-          <img src={logo.url} alt="Uplyft Business" className="h-12 w-auto" />
-          <Btn>Book a session</Btn>
+        <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-6 sm:py-6">
+          <img src={logo.url} alt="Uplyft Business" className="h-9 w-auto shrink-0 sm:h-12" />
+          <Btn>Book now</Btn>
         </nav>
-        <section className="mx-auto max-w-6xl px-6 pb-28 pt-16">
-          <h1 className="max-w-3xl font-display text-5xl font-bold leading-tight md:text-7xl">We solve growth problems where they start</h1>
+        <section className="mx-auto max-w-6xl px-6 pb-20 pt-10 md:pb-28 md:pt-16">
+          <h1 className="max-w-3xl font-display text-3xl font-bold md:text-4xl leading-tight sm:text-5xl md:text-7xl">We solve growth problems where they start</h1>
           <p className="mt-6 max-w-2xl text-lg opacity-80">Four seasoned operators. A century of combined experience. One connected approach to Strategy, Revenue, Talent and Execution.</p>
           <div className="mt-10"><Btn>Book the Diagnostic Council</Btn></div>
         </section>
       </header>
 
-      <section className="mx-auto max-w-4xl px-6 py-24 text-center">
-        <h2 className="font-display text-4xl font-bold">Skip the frameworks. Work with operators.</h2>
+      <section className="mx-auto max-w-4xl px-6 py-16 md:py-24 text-center">
+        <h2 className="font-display text-3xl font-bold md:text-4xl">Skip the frameworks. Work with operators.</h2>
         <p className="mt-6 text-lg text-muted-foreground">We're four senior leaders who have built and repaired go-to-market engines around the world. No junior teams — you work with us directly, as a group or one-on-one, depending on the problem.</p>
       </section>
 
-      <section className="bg-secondary py-24">
+      <section className="bg-secondary py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-sm font-bold tracking-widest text-highlight">HOW WE WORK</p>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
@@ -83,8 +83,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="font-display text-4xl font-bold">The operators</h2>
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <h2 className="font-display text-3xl font-bold md:text-4xl">The operators</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {operators.map((o) => (
             <div key={o.t} className="rounded-2xl border bg-card p-6">
@@ -96,10 +96,10 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-primary py-24 text-primary-foreground">
+      <section className="bg-primary py-16 md:py-24 text-primary-foreground">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-sm font-bold tracking-widest text-highlight">WHAT WE FIX</p>
-          <h2 className="mt-3 font-display text-4xl font-bold">We join the pieces others treat separately.</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">We join the pieces others treat separately.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-4">
             {fixes.map((f) => (
               <div key={f.t} className="border-t border-highlight pt-6">
@@ -111,9 +111,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <p className="text-sm font-bold tracking-widest text-highlight">CLIENT STORIES</p>
-        <h2 className="mt-3 font-display text-4xl font-bold">How problems connect — and get solved.</h2>
+        <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">How problems connect — and get solved.</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {stories.map((s) => (
             <div key={s.t} className="flex flex-col rounded-2xl bg-secondary p-8">
@@ -125,9 +125,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary py-24">
+      <section className="bg-secondary py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="font-display text-4xl font-bold">Why clients choose us</h2>
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Why clients choose us</h2>
           <ul className="mt-8 space-y-4">
             {reasons.map((r) => (
               <li key={r} className="flex gap-4 text-lg"><span className="text-highlight">●</span>{r}</li>
@@ -136,9 +136,9 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="bg-primary py-24 text-center text-primary-foreground">
+      <section id="contact" className="bg-primary py-16 md:py-24 text-center text-primary-foreground">
         <div className="mx-auto max-w-2xl px-6">
-          <h2 className="font-display text-4xl font-bold">Stop guessing. Talk to the operators.</h2>
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Stop guessing. Talk to the operators.</h2>
           <p className="mt-4 opacity-80">Book a 90-minute session with the Council. We'll share what we see, what you need and what it will cost.</p>
           <div className="mt-8"><Btn>Book the Council</Btn></div>
         </div>
