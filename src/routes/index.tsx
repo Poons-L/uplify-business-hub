@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo-dark.svg.asset.json";
-import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -142,7 +141,6 @@ function Index() {
         <div className="mx-auto max-w-2xl px-6">
           <h2 className="font-display text-3xl font-bold md:text-4xl">Stop guessing. Ask the operators.</h2>
           <p className="mt-4 opacity-80">Book a 90-minute Diagnostic Session with the Council. We’ll tell you what we see, what you need, and exactly what it will cost.</p>
-          <ContactForm />
         </div>
       </section>
       <footer className="py-8 text-center text-sm text-muted-foreground">© 2026 Uplyft Business</footer>
